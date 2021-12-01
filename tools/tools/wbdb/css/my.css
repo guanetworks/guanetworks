@@ -1,0 +1,13 @@
+﻿.toolbar{
+    margin: 10px 0;
+}
+
+#diffoutput .diff{
+    width: 100%;
+}
+#diffoutput .diff tbody th{
+    width: 40px;
+}
+#diffoutput .inlinediff tbody td {
+    width: 100%;
+}
