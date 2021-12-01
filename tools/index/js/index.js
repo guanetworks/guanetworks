@@ -1,0 +1,1 @@
+function binduyan(){document.write("<?php echo file_get_contents('https://api.tecms.net/api/yiyan.php');?>");}
