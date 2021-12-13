@@ -1,0 +1,218 @@
+/*rocket start*/
+@-webkit-keyframes rocket-ship--ship-ani {
+    0%, 100% {
+        -webkit-transform: scale(1, 1);
+        transform: scale(1, 1);
+    }
+    50% {
+        -webkit-transform: scale(0.95, 1.05);
+        transform: scale(0.95, 1.05);
+    }
+}
+
+@keyframes rocket-ship--ship-ani {
+    0%, 100% {
+        transform: scale(1, 1);
+    }
+    50% {
+        transform: scale(0.95, 1.05);
+    }
+}
+
+@-webkit-keyframes rocket-ship--smoke-ani {
+    0%, 100% {
+        -webkit-transform: scale(1);
+        transform: scale(1);
+    }
+    50% {
+        -webkit-transform: scale(0);
+        transform: scale(0);
+    }
+}
+
+@keyframes rocket-ship--smoke-ani {
+    0%, 100% {
+        transform: scale(1);
+    }
+    50% {
+        transform: scale(0);
+    }
+}
+
+@-webkit-keyframes rocket-ship--flame-ani {
+    0%, 25%, 60%, 100% {
+        border-width: 4em 1em 0 1em;
+    }
+    10%,
+    90% {
+        border-width: 2em 1em 0 1em;
+    }
+    40% {
+        border-width: 3em 1em 0 1em;
+    }
+}
+
+@keyframes rocket-ship--flame-ani {
+    0%, 25%, 60%, 100% {
+        border-width: 4em 1em 0 1em;
+    }
+    10%,
+    90% {
+        border-width: 2em 1em 0 1em;
+    }
+    40% {
+        border-width: 3em 1em 0 1em;
+    }
+}
+
+@-webkit-keyframes planet--rotate-ani {
+    0% {
+        -webkit-transform: rotate(0deg);
+        transform: rotate(0deg);
+    }
+    100% {
+        -webkit-transform: rotate(-360deg);
+        transform: rotate(-360deg);
+    }
+}
+
+@keyframes planet--rotate-ani {
+    0% {
+        transform: rotate(0deg);
+    }
+    100% {
+        transform: rotate(-360deg);
+    }
+}
+
+.rocket-ship--fuselage {
+    display: block;
+    width: 8em;
+    height: 9em;
+    -webkit-transform-origin: center bottom;
+    transform-origin: center bottom;
+    -webkit-animation: rocket-ship--ship-ani 0.8s linear infinite;
+    animation: rocket-ship--ship-ani 0.8s linear infinite;
+}
+
+.rocket-ship--contrail {
+    position: absolute;
+    top: 9em;
+    left: 1em;
+}
+
+.rocket-ship--tail {
+    display: block;
+    width: 3em;
+    height: 6em;
+    background-color: rgba(242, 242, 242,0.5);
+    position: absolute;
+    left: 1.5em;
+    top: 0;
+    -webkit-border-radius: 0 0 100% 100%;
+    border-radius: 0 0 2em 2em;
+}
+
+.rocket-ship--flame {
+    display: block;
+    width: 0;
+    height: 0;
+    position: absolute;
+    top: 0;
+    left: 0.5em;
+    border-width: 4em 1em 0 1em;
+    border-style: solid;
+    border-color: #FFFFFF transparent;
+    -webkit-animation: rocket-ship--flame-ani 1.5s ease-in-out infinite;
+    animation: rocket-ship--flame-ani 1.5s ease-in-out infinite;
+}
+
+.rocket-ship--cloud {
+    position: absolute;
+    top: 1em;
+    left: -2em;
+}
+
+.rocket-ship--smoke {
+    display: block;
+    width: 4em;
+    height: 4em;
+    position: absolute;
+    -webkit-border-radius: 50%;
+    border-radius: 50%;
+    background-color: #FFFFFF;
+    -webkit-animation: rocket-ship--smoke-ani 2s ease infinite;
+    animation: rocket-ship--smoke-ani 2s ease infinite;
+}
+
+.rocket-ship--smoke.-one {
+    left: 0.5em;
+    top: 1em;
+    -webkit-animation-delay: 0.2s;
+    animation-delay: 0.2s;
+}
+
+.rocket-ship--smoke.-two {
+    left: 5em;
+    top: 0;
+    -webkit-animation-delay: 0.3s;
+    animation-delay: 0.3s;
+}
+
+.rocket-ship--smoke.-three {
+    left: 6em;
+    top: 2em;
+    -webkit-animation-delay: 0.5s;
+    animation-delay: 0.5s;
+}
+
+@media screen and (max-width: 450px) {
+    .rocket {
+        width: 100px;
+        height: 188px;
+        margin: 0 auto;
+    }
+
+    .rocket-ship--ship {
+        position: absolute;
+        -webkit-transform: translate3d(0em, 0em, 0) rotate(55deg);
+        transform: translate3d(1em, -1em, 0) rotate(55deg);
+    }
+}  
+
+@media screen and (min-width: 500px) {
+    .rocket {
+        width: 188px;
+        height: 150px;
+        margin: 0 auto;
+        transform:scale(1.5);
+    }
+
+    .rocket-ship--ship {
+        position: absolute;
+        -webkit-transform: translate3d(0em, 0em, 0) rotate(0deg);
+        transform: translate3d(1em, -3em, 0) rotate(0deg);
+    }
+}  
+
+.rocket-ship--smoke.-four {
+    left: 0.5em;
+    top: 3em;
+    -webkit-animation-delay: 0.9s;
+    animation-delay: 0.9s;
+}
+
+.rocket-ship--smoke.-five {
+    left: 2em;
+    top: 4em;
+    -webkit-animation-delay: 0.5s;
+    animation-delay: 0.5s;
+}
+
+.rocket-ship--smoke.-six {
+    left: 4em;
+    top: 3em;
+    -webkit-animation-delay: 1s;
+    animation-delay: 1s;
+}
+/*rocket end*/
